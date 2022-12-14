@@ -1,5 +1,6 @@
-import styles from "../styles/Pizzalist.module.css";
 import React from "react";
+import styles from "../styles/Pizzalist.module.css";
+import PizzaCard from "./PizzaCard";
 
 const PizzaList = () => {
   return (
@@ -10,6 +11,14 @@ const PizzaList = () => {
         aperiam autem officia praesentium incidunt repellendus laudantium
         placeat mollitia assumenda, cumque dicta labore.
       </p>
+      <div className={styles.wrapper}>
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+      </div>
     </div>
   );
 };
