@@ -1,36 +1,106 @@
+/* eslint-disable react/jsx-key */
+// https://github.com/safak/youtube/blob/next-pizza-ui/components/Featured.jsx
+
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "../styles/Featured.module.css";
 
 const Featured = () => {
+  const [index, setIndex] = useState(0);
+
   const images = [
     "/img/featured.png",
     "/img/featured2.png",
     "/img/featured3.png"
   ];
 
+  const handleArrow = (direction) => {
+    if (direction === "l") {
+      setIndex(index !== 0 ? index - 1 : 2);
+    }
+
+    if (direction === "r") {
+      setIndex(index !== 2 ? index + 1 : 0);
+    }
+  };
+
+  console.log(index);
   return (
+    ////// with error
     <div className={styles.container}>
-      <div className={styles.arrowContainer} style={{ left: 0 }}>
+      <div
+        className={styles.arrowContainer}
+        style={{ left: 0 }}
+        onClick={() => handleArrow("l")}
+      >
         {/* <Image src="/img/arrowl.png" alt="" width={34} height={34} /> */}
         <Image src="/img/arrowl.png" alt="" layout="fill" objectFit="contain" />
       </div>
 
-      <div className={styles.wrapper}>
+      <div
+        className={styles.wrapper}
+        style={{ transform: `translateX(${-100 * index}vw)` }}
+      >
+        {images.map((img, i) => (
+          <div className={styles.imgContainer}>
+            <Image src={img} alt="" key={i} layout="fill" objectFit="contain" />
+          </div>
+        ))}
+      </div>
+
+      {/* <div
+        className={styles.wrapper}
+        style={{ transform: `translateX(${-100 * index}vw)` }}
+      >
         <div className={styles.imgContainer}>
           {images.map((img, i) => (
-            // <Image src={img} key={i} alt="" width={1080} height={780} />
+            // <Image src={img} key={i} alt="" width={1125} height={780} />
             <Image src={img} key={i} alt="" layout="fill" objectFit="contain" />
           ))}
         </div>
-      </div>
+      </div> */}
 
-      <div className={styles.arrowContainer} style={{ right: 0 }}>
+      <div
+        className={styles.arrowContainer}
+        style={{ right: 0 }}
+        onClick={() => handleArrow("r")}
+      >
         {/* <Image src="/img/arrowr.png" width={34} height={34} alt="" /> */}
         <Image src="/img/arrowr.png" alt="" layout="fill" objectFit="contain" />
       </div>
     </div>
+
+    //// re write from original tuts -----
+    // <div className={styles.container}>
+    //   <div
+    //     className={styles.arrowContainer}
+    //     style={{ left: 0 }}
+    //     onClick={() => handleArrow("l")}
+    //   >
+    //     <Image src="/img/arrowl.png" alt="" layout="fill" objectFit="contain" />
+    //   </div>
+
+    //   <div
+    //     className={styles.wrapper}
+    //     style={{ transform: `translateX(${-100 * index} vw)` }}
+    //   >
+    //     {images.map((img, i) => (
+    //       <div className={styles.imgContainer} key={i}>
+    //         <Image src={img} alt="" layout="fill" objectFit="contain" />
+    //       </div>
+    //     ))}
+    //   </div>
+
+    //   <div
+    //     className={styles.arrowContainer}
+    //     style={{ left: 0 }}
+    //     onClick={() => handleArrow("r")}
+    //   >
+    //     <Image src="/img/arrowl.png" alt="" layout="fill" objectFit="contain" />
+    //   </div>
+    // </div>
+    //// re write from original tuts end-----
   );
 };
 
