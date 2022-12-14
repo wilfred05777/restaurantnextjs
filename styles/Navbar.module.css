@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
+  top: 0; /* required by position: sticky */
+  z-index: 999; /* im not sure what this is */
 }
 
 .item { 
