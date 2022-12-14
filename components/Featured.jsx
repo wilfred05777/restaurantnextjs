@@ -43,6 +43,7 @@ const Featured = () => {
         style={{ transform: `translateX(${-100 * index}vw)` }}
       >
         {images.map((img, i) => (
+          // https://nextjs.org/docs/api-reference/next/image#fill
           <div className={styles.imgContainer}>
             <Image src={img} alt="" key={i} layout="fill" objectFit="contain" />
           </div>
