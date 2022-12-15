@@ -39,7 +39,7 @@ const Footer = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <div className={styles.title}>Working Hours</div>
+          <h1 className={styles.title}>Working Hours</h1>
           <p className={styles.text}>
             MONDAY UNTIL FRIDAY
             <br /> 9:00 - 22:00
