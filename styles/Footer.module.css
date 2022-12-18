@@ -1,13 +1,8 @@
 .container {
-  
   height: calc(100vh - 100px);
   background-color: #222;
   display: flex;
 }
-
-/* .container h1 h2{
-  text-transform: uppercase;
-} */
 
 .item {
   flex: 1;
@@ -39,4 +34,28 @@
 
 .text{
   color: #fff;
+}
+
+@media screen and ( max-width: 480px){
+  .container{
+    height: auto;
+    text-align: center;
+  }
+  
+  .item:first-child{
+    display: none;
+  }
+
+  .item{
+    flex-direction: column;
+
+  }
+
+  .title{
+    font-size: 30px;
+  }
+
+  .text{
+    font-size: 20px;
+  }
 }
