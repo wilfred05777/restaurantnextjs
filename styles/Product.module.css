@@ -6,6 +6,7 @@
 .left{
   flex: 1;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +17,50 @@
 }
 
 .imgContainer{
+  align-items: center  ;
+  justify-content: center;
   width: 80%;
   height: 80%;
   position: relative;
+}
+
+.price {
+  color: #d1411e;
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 1px solid #d1411e;
+}
+
+.sizes{
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.size{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.size:nth-child(2){
+  width: 40px;
+  height: 40px;
+}
+
+.size:last-child{
+  width: 50px;
+  height: 50px;
+}
+
+.number{
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  background-color: teal;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 5px;
+  border-radius: 10px;
 }
