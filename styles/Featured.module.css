@@ -4,7 +4,7 @@
   height: calc(100vh - 100px);
   background-color: #d1411e;
   overflow: hidden; /*hide the scroll image horizontally*/
-  position: relative;
+  position: relative; /* middle arrow image right and left*/
 }
 
 .arrowContainer {
@@ -38,6 +38,7 @@
 }
 
 @media screen and (max-width: 480px) {
+  /* featured */
   .container{
     height: 50vh;
   }
