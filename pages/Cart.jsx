@@ -57,21 +57,16 @@ const Cart = () => {
               </div>
             </td>
             <td>
-              <span className={styles.name}>CORALZO</span>
+              <span className={styles.id}>1122313</span>
             </td>
             <td>
-              <span className={styles.extras}>
-                Double ingredient, spicy sauce
-              </span>
+              <span className={styles.name}>Rodrigo Duterte</span>
             </td>
             <td>
-              <span className={styles.price}>$19.90</span>
+              <span className={styles.address}>Davao City</span>
             </td>
             <td>
-              <span className={styles.quantity}>2</span>
-            </td>
-            <td>
-              <span className={styles.total}>$39.80</span>
+              <span className={styles.total}>$79.80</span>
             </td>
           </tr>
         </table>
