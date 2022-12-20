@@ -20,3 +20,5 @@ export default function Home() {
     </div>
   );
 }
+
+// https://github.com/vercel/next.js/tree/canary/examples/with-mongodb-mongoose
