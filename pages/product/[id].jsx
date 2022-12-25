@@ -6,6 +6,7 @@ import axios from "axios";
 const Product = ({ pizza }) => {
   const [size, setSize] = useState(0);
   const [price, setPrice] = useState(pizza.prices[0]);
+  const [quantity, setQuantity] = useState(1);
   const [extras, setExtras] = useState([]);
 
   const changePrice = (number) => {
@@ -121,9 +122,20 @@ const Product = ({ pizza }) => {
             <label htmlFor="garlic">Garlic sauce</label>
           </div> */}
         </div>
-        <div className={styles.add}></div>
-        <input type="number" defaultValue={1} className={styles.quantity} />
-        <button className={styles.button}>Add to Cart</button>
+        {/* <div className={styles.add}>
+          <input type="number" defaultValue={1} className={styles.quantity} />
+          <button className={styles.button}>Add to Cart</button>
+        </div> */}
+
+        <div className={styles.add}>
+          <input
+            onChange={(e) => setQuantity(e.target.value)}
+            type="number"
+            defaultValue={1}
+            className={styles.quantity}
+          />
+          <button className={styles.button}>Add to Cart</button>
+        </div>
       </div>
     </div>
   );
