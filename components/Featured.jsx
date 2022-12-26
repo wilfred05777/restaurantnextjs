@@ -1,7 +1,6 @@
-/* eslint-disable react/jsx-key */
 // https://github.com/safak/youtube/blob/next-pizza-ui/components/Featured.jsx
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React, { useState } from "react";
 
 import styles from "../styles/Featured.module.css";

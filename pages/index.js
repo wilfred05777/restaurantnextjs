@@ -2,7 +2,7 @@
 // github source: https://github.com/safak/youtube/tree/next-pizza-ui
 
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Featured from "../components/Featured";
 import PizzaList from "../components/PizzaList";
 import styles from "../styles/Home.module.css";
