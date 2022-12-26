@@ -34,4 +34,4 @@ export const getServerSideProps = async () => {
 
 // https://github.com/vercel/next.js/tree/canary/examples/with-mongodb-mongoose
 
-// https://github.com/paypal/react-paypal-js
+// source: https://github.com/paypal/react-paypal-js
