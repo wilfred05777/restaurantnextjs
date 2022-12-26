@@ -113,3 +113,23 @@
   }
   
 }
+
+.paymentMethods{
+  margin-top: 10px ;
+  /* display: flex; */
+  font-display: column;
+}
+
+.payButton{
+  /* display: flex; */
+  padding: 12px 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: teal;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 1rem ;
+}
